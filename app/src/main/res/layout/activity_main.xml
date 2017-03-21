@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_below="@+id/design_bottom_sheet"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:id="@+id/bottom_sheet"
+            android:orientation="vertical"
+            android:background="#e8e8e8"
+            app:behavior_peekHeight="0dp"
+            app:behavior_hideable="true"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_behavior="@string/bottom_sheet_behavior">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingaction"
+            android:onClick="designClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:elevation="3dp"
+            app:rippleColor="@color/colorAccent"
+            app:layout_anchor="@id/bottom_sheet"
+            app:layout_anchorGravity="right|top"
+            app:borderWidth="0dp"
+            android:backgroundTint="@color/colorPrimary"
+            app:pressedTranslationZ="6dp"
+            android:layout_margin="10dp"
+            android:src="@mipmap/ic_launcher"
+            />
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
